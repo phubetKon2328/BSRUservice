@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PassfkFragment">
+    <!--Content-->
+    <LinearLayout
+        android:layout_margin="70dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <!--Register button Agree-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:layout_margin="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="FPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/buttonFpassBack"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+</LinearLayout>
+
+</FrameLayout>

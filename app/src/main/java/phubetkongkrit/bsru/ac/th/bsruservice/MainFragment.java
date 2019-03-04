@@ -28,7 +28,8 @@ public class MainFragment extends Fragment {
 
 //        Register Controller
         registerController();
-
+        GofPass();
+        GoService();
 
     } //Main Method
 
@@ -50,6 +51,40 @@ public class MainFragment extends Fragment {
         });
     }
 
+    private void GofPass(){
+        TextView textView = getView().findViewById(R.id.txtFPass);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+//                Replace Fragment
+                getActivity()
+                        .getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.layoutMainFragment, new PassfkFragment())
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
+    }
+    private void GoService(){
+        TextView textView = getView().findViewById(R.id.txtService);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+//                Replace Fragment
+                getActivity()
+                        .getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.layoutMainFragment, new ServiveFragment())
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
