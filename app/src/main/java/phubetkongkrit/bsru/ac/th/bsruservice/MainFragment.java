@@ -77,7 +77,7 @@ public class MainFragment extends Fragment {
                             JSONArray jsonArray = new JSONArray(json);
                             JSONObject jsonObject = jsonArray.getJSONObject(0);
                             if (password.equals(jsonObject.getString("Password"))) {
-                                Toast.makeText(getActivity(), "Welcom" + jsonObject.getString("Name"), Toast.LENGTH_LONG);
+                                Toast.makeText(getActivity(), "Welcom" + jsonObject.getString("Name"), Toast.LENGTH_SHORT).show();
                             } else {
 
                             }
