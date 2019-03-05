@@ -104,7 +104,20 @@ public class RegisterFragment extends Fragment {
             myAlert.normalDialog("", "Please Select your Gender");
         } else {
 
-            
+            try {
+                Myconstant myconstant = new Myconstant();
+                AddUserThread  addUserThread = new AddUserThread(getActivity());
+                addUserThread.execute(name, user, password, genderString, myconstant.getUrlAddUser());
+
+                String result = addUserThread.get();
+                if (Boolean.parseBoolean(result)) {
+                    getActivity().getSupportFragmentManager().popBackStack();
+                }else {
+                    myAlert.normalDialog("Canot Register","Try Again");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
 
